@@ -1,0 +1,643 @@
+@import "tailwindcss";
+
+:root {
+/* ==========================================
+     BRAND
+  ========================================== */
+
+  --brand: #7A38FC;
+  --brand-hover: #5c2a9c;
+  --brand-bright: #9d5bf9;
+  --brand-accent: #e6d6ff;
+
+  /* ==========================================
+     FEEDBACK
+  ========================================== */
+
+  --success: #16a34a;
+  --success-accent: #dcfce7;
+
+  --warning: #f59e0b;
+  --warning-accent: #fef3c7;
+
+  --danger: #dc2626;
+  --danger-accent: #fee2e2;
+
+  /* ==========================================
+     BACKGROUNDS
+  ========================================== */
+
+  --background: #ffffff;
+  --surface: #fafafa;
+  --surface-hover: #f5f5f5;
+
+  /* ==========================================
+     BORDERS
+  ========================================== */
+
+  --border: #e5e5e5;
+  --border-hover: #d4d4d4;
+
+  /* ==========================================
+     TEXT
+  ========================================== */
+
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-muted: #737373;
+  --text-disabled: #a3a3a3;
+  --text-neutral: #ffffff;
+
+  /* ==========================================
+     FONTS
+  ========================================== */
+  --font-heading: "Instrument Sans", sans-serif;
+  --font-body: "Instrument Serif", serif;
+
+  /* ==========================================
+     TYPOGRAPHY SCALE
+  ========================================== */
+
+  /* H1 */
+  --h1-size: 64px;
+  --h1-line-height: 110%;
+  --h1-weight: 700;
+  --h1-letter-spacing: -0.01em;
+
+  /* H2 */
+  --h2-size: 56px;
+  --h2-line-height: 115%;
+  --h2-weight: 700;
+
+  /* H3 */
+  --h3-size: 46px;
+  --h3-line-height: 110%;
+  --h3-weight: 600;
+  --h3-letter-spacing: -0.02em;
+
+  /* H4 */
+  --h4-size: 36px;
+  --h4-line-height: 125%;
+  --h4-weight: 600;
+
+  /* H5 */
+  --h5-size: 28px;
+  --h5-line-height: 130%;
+  --h5-weight: 600;
+
+  /* H6 */
+  --h6-size: 24px;
+  --h6-line-height: 120%;
+  --h6-weight: 600;
+  --h6-letter-spacing: -0.01em;
+
+    /* H7 */
+  --h7-size: 20px;
+  --h7-line-height: 125%;
+  --h7-weight: 600;
+  --h7-letter-spacing: -0.01em;
+
+  /* Body */
+  --body-lg: 20px;
+  --body-md: 18px;
+  --body-sm: 16px;
+  --body-xs: 14px;
+}
+
+/* ==========================================
+   TAILWIND V4 TOKENS
+========================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+    /* Brand */
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-accent: var(--brand-accent);
+
+  /* Feedback */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  /* Surface */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+
+  /* Text */
+  --color-foreground: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-neutral: var(--text-neutral);
+
+  /* Border */
+  --color-border: var(--border);
+  --font-heading-token: var(--font-heading);
+  --font-body-token: var(--font-body);
+
+  --font-sans: var(--font-body);
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE TYPOGRAPHY
+========================================== */
+
+/* 1280px - 1535px */
+@media (max-width: 1535px) {
+  :root {
+    --h1-size: 64px;
+    --h2-size: 56px;
+    --h3-size: 46px;
+    --h4-size: 36px;
+    --h5-size: 28px;
+    --h6-size: 24px;
+    --h7-size: 20px;
+  }
+}
+
+/* 1024px - 1279px */
+@media (max-width: 1279px) {
+  :root {
+    --h1-size: 56px;
+    --h2-size: 48px;
+    --h3-size: 36px;
+    --h4-size: 28px;
+    --h5-size: 24px;
+    --h6-size: 22px;
+    --h7-size: 18px;
+  }
+}
+
+/* 768px - 1023px */
+@media (max-width: 1023px) {
+  :root {
+    --h1-size: 48px;
+    --h2-size: 40px;
+    --h3-size: 32px;
+    --h4-size: 24px;
+    --h5-size: 22px;
+    --h6-size: 18px;
+    --h7-size: 18px;
+    --body-lg: 18px;
+    --body-md: 16px;
+    --body-sm: 14px;
+    --body-xs: 12px;
+  }
+}
+
+/* 480px - 767px */
+@media (max-width: 767px) {
+  :root {
+    --h1-size: 40px;
+    --h2-size: 36px;
+    --h3-size: 28px;
+    --h4-size: 22px;
+    --h5-size: 20px;
+    --h6-size: 17px;
+    --h7-size: 16px;
+  }
+}
+
+/* 0px - 479px */
+@media (max-width: 479px) {
+  :root {
+    --h1-size: 36px;
+    --h2-size: 32px;
+    --h3-size: 24px;
+    --h4-size: 20px;
+    --h5-size: 18px;
+    --h6-size: 16px;
+    --h7-size: 16px;
+    --body-lg: 16px;
+    --body-md: 14px;
+    --body-sm: 13px;
+    --body-xs: 11.5px;
+  }
+}
+
+/* ==========================================
+   GLOBAL ELEMENT STYLES
+========================================== */
+
+.body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: var(--body-md);
+  line-height: 1.7;
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,
+.h1 {
+  font-family: var(--font-heading);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+h2,
+.h2 {
+  font-family: var(--font-heading);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  line-height: var(--h2-line-height);
+  letter-spacing: -0.025em;
+}
+
+h3,
+.h3 {
+  font-family: var(--font-heading);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+}
+
+h4,
+.h4 {
+  font-family: var(--font-heading);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line-height);
+}
+
+h5,
+.h5 {
+  font-family: var(--font-heading);
+  font-size: var(--h5-size);
+  font-weight: var(--h5-weight);
+  line-height: var(--h5-line-height);
+}
+
+h6,
+.h6 {
+  font-family: var(--font-heading);
+  font-size: var(--h6-size);
+  font-weight: var(--h6-weight);
+  line-height: var(--h6-line-height);
+  letter-spacing: var(--h6-letter-spacing);
+}
+
+h7,
+.h7 {
+  font-family: var(--font-heading);
+  font-size: var(--h7-size);
+  font-weight: var(--h7-weight);
+  line-height: var(--h7-line-height);
+  letter-spacing: var(--h7-letter-spacing);
+}
+
+/* ==========================================
+   TEXT UTILITIES
+========================================== */
+
+.text-lg {
+  font-size: var(--body-lg);
+  line-height: 1.6;
+}
+
+.text-md {
+  font-size: var(--body-md);
+  line-height: 1.6;
+}
+
+.text-sm {
+  font-size: var(--body-sm);
+  line-height: 1.6;
+}
+
+.text-xs {
+  font-size: var(--body-xs);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   BUTTON TOKENS
+========================================== */
+
+:root {
+  /* Primary / Secondary / Danger */
+
+  --btn-height-sm: 40px;
+  --btn-height-md: 48px;
+  --btn-height-lg: 56px;
+
+  --btn-padding-sm-x: 16px;
+  --btn-padding-md-x: 24px;
+  --btn-padding-lg-x: 32px;
+
+  --btn-font-sm: 14px;
+  --btn-font-md: 16px;
+  --btn-font-lg: 18px;
+
+  --btn-radius: 8px;
+}
+
+/* Desktop XL */
+@media (max-width: 1535px) {
+  :root {
+    --btn-height-sm: 40px;
+    --btn-height-md: 48px;
+    --btn-height-lg: 56px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1279px) {
+  :root {
+    --btn-height-sm: 38px;
+    --btn-height-md: 46px;
+    --btn-height-lg: 52px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  :root {
+    --btn-height-sm: 36px;
+    --btn-height-md: 44px;
+    --btn-height-lg: 50px;
+
+    --btn-font-sm: 13px;
+    --btn-font-md: 15px;
+    --btn-font-lg: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --btn-height-sm: 34px;
+    --btn-height-md: 42px;
+    --btn-height-lg: 48px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 479px) {
+  :root {
+    --btn-height-sm: 32px;
+    --btn-height-md: 40px;
+    --btn-height-lg: 44px;
+
+    --btn-padding-sm-x: 14px;
+    --btn-padding-md-x: 20px;
+    --btn-padding-lg-x: 28px;
+  }
+}
+
+/* ==========================================
+   BUTTON BASE
+========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: var(--font-body);
+  font-weight: 600;
+
+  border-radius: var(--btn-radius);
+
+  transition: all 250ms ease;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-sm {
+  height: var(--btn-height-sm);
+  padding-inline: var(--btn-padding-sm-x);
+  font-size: var(--btn-font-sm);
+}
+
+.btn-md {
+  height: var(--btn-height-md);
+  padding-inline: var(--btn-padding-md-x);
+  font-size: var(--btn-font-md);
+}
+
+.btn-lg {
+  height: var(--btn-height-lg);
+  padding-inline: var(--btn-padding-lg-x);
+  font-size: var(--btn-font-lg);
+}
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+.btn-primary {
+  background: var(--brand);
+  color: var(--color-text-neutral);
+  border: 1px solid var(--brand);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  background: var(--brand-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-brand);
+  color: var(--color-brand);
+}
+
+.btn-secondary:hover {
+  background: var(--color-brand);
+  color: var(--color-text-neutral);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   ACTION / DANGER BUTTON
+========================================== */
+
+.btn-danger {
+  background: var(--danger);
+  border: 1px solid var(--danger);
+  color: var(--color-text-neutral);
+}
+
+.btn-danger:hover {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.btn-danger:active {
+  transform: scale(0.98);
+}
+
+.btn-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container{
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+@keyframes blurDropIn {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.blur-drop-in {
+  animation: blurDropIn 0.8s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+@keyframes heroImageReveal {
+  from {
+    transform: scale(1.15);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-image-reveal {
+  animation: heroImageReveal 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes category-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-category-scroll {
+  width: max-content;
+  animation: category-scroll 20s linear infinite;
+}
+
+@media (min-width: 1024px) {
+  .animate-category-scroll {
+    animation: none;
+    width: 100%;
+  }
+}
+
+.animate-video-scroll {
+  width: max-content;
+  animation: category-scroll 20s linear infinite;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-heading {
+  animation: scaleHeading linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 100%;
+}
+
+@keyframes scaleHeading {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-testimonial-scroll {
+  width: max-content;
+  animation: testimonial-scroll 60s linear infinite;
+}
