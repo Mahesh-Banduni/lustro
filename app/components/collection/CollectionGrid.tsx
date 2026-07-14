@@ -13,6 +13,7 @@ const categories = [
     description:
       "Premium handcrafted leather accessories for modern lifestyles.",
     featured: true,
+    filter: "Best Selling",
   },
   {
     title: "Head Gear",
@@ -20,6 +21,7 @@ const categories = [
     image: "/images/product/c2.jpeg",
     description:
       "Classic and contemporary headwear crafted for every occasion.",
+    filter: "On Sale",
   },
   {
     title: "Eyewear",
@@ -27,6 +29,7 @@ const categories = [
     image: "/images/product/pt1.jpg",
     description:
       "Designer eyewear blending comfort, style, and innovation.",
+    filter: "Best Selling",
   },
   {
     title: "Wrist Watches",
@@ -34,6 +37,7 @@ const categories = [
     image: "/images/product/c4.webp",
     description:
       "Precision-engineered timepieces built to elevate every moment.",
+    filter: "Top Rated",
   },
   {
     title: "Travel Accessories",
@@ -41,6 +45,7 @@ const categories = [
     image: "/images/product/p3.jpeg",
     description:
       "Refined essentials designed for modern travel and exploration.",
+    filter: "Best Selling",
   },
   {
     title: "Footwear",
@@ -48,6 +53,7 @@ const categories = [
     image: "/images/product/p6.jpg",
     description:
       "Luxury footwear crafted for comfort and timeless appeal.",
+    filter: "Best Selling",
   },
 ];
 
@@ -71,7 +77,7 @@ export default function CollectionGrid() {
 
     const matchesCategory =
       activeCategory === "All Categories" ||
-      item.category === activeCategory;
+      item.filter === activeCategory;
 
     return matchesSearch && matchesCategory;
   });
