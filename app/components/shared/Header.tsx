@@ -116,7 +116,8 @@ export default function Header({ visible }: HeaderProps) {
           </button>
 
           {/* Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+          <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex flex-row items-center justify-center gap-2">
+          {/* <Image src="/images/logo.png" alt="Lustro" width={16} height={16} className="w-16 h-16" /> */}
             <a
               href="/"
               className={`font-primary italic font-bold text-2xl sm:text-3xl lg:text-[40px] ${textColor}`}
