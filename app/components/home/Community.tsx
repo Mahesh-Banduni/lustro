@@ -13,12 +13,12 @@ export default function Community() {
     const videoList = [
         {name: 'Video 1',link: '/videos/v1.mp4'},
         {name: 'Video 2',link: '/videos/v2.mp4'},
-        {name: 'Video 3',link: '/videos/v1.mp4'},
-        {name: 'Video 4',link: '/videos/v2.mp4'},
+        {name: 'Video 3',link: '/videos/v3.mp4'},
+        {name: 'Video 4',link: '/videos/v4.mp4'},
         {name: 'Video 5',link: '/videos/v1.mp4'},
         {name: 'Video 6',link: '/videos/v2.mp4'},
-        {name: 'Video 7',link: '/videos/v1.mp4'},
-        {name: 'Video 8',link: '/videos/v2.mp4'},
+        {name: 'Video 7',link: '/videos/v3.mp4'},
+        {name: 'Video 8',link: '/videos/v4.mp4'},
     ]
 
 const toggleVideo = (index: number) => {

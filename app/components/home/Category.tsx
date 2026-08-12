@@ -12,8 +12,8 @@ export default function Category(){
     return (
         <div className="container min-w-0 pt-10 md:pt-15 lg:pt-25 px-6 md:px-8 lg:px-10 relative overflow-hidden">
             <p className="text-[28px] sm:text-[32px] md:text-[36px] xl:text-[40px] font-secondary tracking-tight leading-[1.13]">Shop By <span className="italic font-primary">Category</span></p>
-            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                <div className="hidden lg:block"></div>
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 first:col-span-2">
+                {/* <div className="hidden lg:block"></div> */}
                 {
                     categoryList.map((item)=>(
                         <div key={item.name} className="relative aspect-[3/5] overflow-hidden group w-full h-[400px] md:h-full">
